@@ -1,4 +1,4 @@
-use crate::currency::Currency;
+use crate::currency::IsoCurrency;
 use crate::locale::Locale;
 use std::fmt;
 
@@ -194,12 +194,12 @@ impl fmt::Display for Iso {
 }
 
 /// Returns a Currency object given an ISO enum.
-pub fn from_enum(code: &Iso) -> Currency {
+pub fn from_enum(code: &Iso) -> IsoCurrency {
     use Iso::*;
     use Locale::*;
 
     match code {
-        AED => Currency {
+        AED => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "AED",
             iso_numeric_code: "784",
@@ -209,7 +209,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "د.إ",
             symbol_first: false,
         },
-        AFN => Currency {
+        AFN => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "AFN",
             iso_numeric_code: "971",
@@ -219,7 +219,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "؋",
             symbol_first: false,
         },
-        AMD => Currency {
+        AMD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "AMD",
             iso_numeric_code: "051",
@@ -229,7 +229,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "դր.",
             symbol_first: false,
         },
-        ANG => Currency {
+        ANG => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "ANG",
             iso_numeric_code: "532",
@@ -239,7 +239,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "ƒ",
             symbol_first: false,
         },
-        AOA => Currency {
+        AOA => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "AOA",
             iso_numeric_code: "973",
@@ -249,7 +249,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Kz",
             symbol_first: false,
         },
-        ARS => Currency {
+        ARS => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "ARS",
             iso_numeric_code: "032",
@@ -259,7 +259,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        AUD => Currency {
+        AUD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "AUD",
             iso_numeric_code: "036",
@@ -269,7 +269,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        AWG => Currency {
+        AWG => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "AWG",
             iso_numeric_code: "533",
@@ -279,7 +279,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "ƒ",
             symbol_first: false,
         },
-        AZN => Currency {
+        AZN => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "AZN",
             iso_numeric_code: "944",
@@ -289,7 +289,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₼",
             symbol_first: true,
         },
-        BAM => Currency {
+        BAM => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "BAM",
             iso_numeric_code: "977",
@@ -299,7 +299,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "KM",
             symbol_first: true,
         },
-        BBD => Currency {
+        BBD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "BBD",
             iso_numeric_code: "052",
@@ -309,7 +309,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        BDT => Currency {
+        BDT => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "BDT",
             iso_numeric_code: "050",
@@ -320,7 +320,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol_first: true,
         },
 
-        BGN => Currency {
+        BGN => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "BGN",
             iso_numeric_code: "975",
@@ -330,7 +330,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "лв.",
             symbol_first: false,
         },
-        BHD => Currency {
+        BHD => IsoCurrency {
             exponent: 3,
             iso_alpha_code: "BHD",
             iso_numeric_code: "048",
@@ -340,7 +340,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "ب.د",
             symbol_first: true,
         },
-        BIF => Currency {
+        BIF => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "BIF",
             iso_numeric_code: "108",
@@ -351,7 +351,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol_first: false,
         },
 
-        BMD => Currency {
+        BMD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "BMD",
             iso_numeric_code: "060",
@@ -361,7 +361,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        BND => Currency {
+        BND => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "BND",
             iso_numeric_code: "096",
@@ -371,7 +371,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        BOB => Currency {
+        BOB => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "BOB",
             iso_numeric_code: "068",
@@ -381,7 +381,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Bs.",
             symbol_first: true,
         },
-        BRL => Currency {
+        BRL => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "BRL",
             iso_numeric_code: "986",
@@ -391,7 +391,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "R$",
             symbol_first: true,
         },
-        BSD => Currency {
+        BSD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "BSD",
             iso_numeric_code: "044",
@@ -401,7 +401,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        BTN => Currency {
+        BTN => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "BTN",
             iso_numeric_code: "064",
@@ -411,7 +411,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Nu.",
             symbol_first: false,
         },
-        BWP => Currency {
+        BWP => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "BWP",
             iso_numeric_code: "072",
@@ -421,7 +421,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "P",
             symbol_first: true,
         },
-        BYN => Currency {
+        BYN => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "BYN",
             iso_numeric_code: "933",
@@ -431,7 +431,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Br",
             symbol_first: false,
         },
-        BYR => Currency {
+        BYR => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "BYR",
             iso_numeric_code: "974",
@@ -441,7 +441,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Br",
             symbol_first: false,
         },
-        BZD => Currency {
+        BZD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "BZD",
             iso_numeric_code: "084",
@@ -451,7 +451,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        CAD => Currency {
+        CAD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "CAD",
             iso_numeric_code: "124",
@@ -461,7 +461,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        CDF => Currency {
+        CDF => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "CDF",
             iso_numeric_code: "976",
@@ -471,7 +471,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Fr",
             symbol_first: false,
         },
-        CHF => Currency {
+        CHF => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "CHF",
             iso_numeric_code: "756",
@@ -481,7 +481,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Fr",
             symbol_first: true,
         },
-        CLF => Currency {
+        CLF => IsoCurrency {
             exponent: 4,
             iso_alpha_code: "CLF",
             iso_numeric_code: "990",
@@ -491,7 +491,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "UF",
             symbol_first: true,
         },
-        CLP => Currency {
+        CLP => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "CLP",
             iso_numeric_code: "152",
@@ -501,7 +501,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        CNY => Currency {
+        CNY => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "CNY",
             iso_numeric_code: "156",
@@ -511,7 +511,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "¥",
             symbol_first: true,
         },
-        COP => Currency {
+        COP => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "COP",
             iso_numeric_code: "170",
@@ -521,7 +521,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        CRC => Currency {
+        CRC => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "CRC",
             iso_numeric_code: "188",
@@ -531,7 +531,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₡",
             symbol_first: true,
         },
-        CUC => Currency {
+        CUC => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "CUC",
             iso_numeric_code: "931",
@@ -541,7 +541,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: false,
         },
-        CUP => Currency {
+        CUP => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "CUP",
             iso_numeric_code: "192",
@@ -551,7 +551,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        CVE => Currency {
+        CVE => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "CVE",
             iso_numeric_code: "132",
@@ -561,7 +561,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: false,
         },
-        CZK => Currency {
+        CZK => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "CZK",
             iso_numeric_code: "132",
@@ -571,7 +571,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Kč",
             symbol_first: false,
         },
-        DJF => Currency {
+        DJF => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "DJF",
             iso_numeric_code: "262",
@@ -581,7 +581,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Fdj",
             symbol_first: false,
         },
-        DKK => Currency {
+        DKK => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "DKK",
             iso_numeric_code: "208",
@@ -591,7 +591,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "kr.",
             symbol_first: false,
         },
-        DOP => Currency {
+        DOP => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "DOP",
             iso_numeric_code: "214",
@@ -601,7 +601,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        DZD => Currency {
+        DZD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "DZD",
             iso_numeric_code: "012",
@@ -611,7 +611,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "د.ج",
             symbol_first: false,
         },
-        EGP => Currency {
+        EGP => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "EGP",
             iso_numeric_code: "818",
@@ -621,7 +621,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "ج.م",
             symbol_first: true,
         },
-        ERN => Currency {
+        ERN => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "ERN",
             iso_numeric_code: "232",
@@ -631,7 +631,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Nfk",
             symbol_first: false,
         },
-        ETB => Currency {
+        ETB => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "ETB",
             iso_numeric_code: "230",
@@ -641,7 +641,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Br",
             symbol_first: false,
         },
-        EUR => Currency {
+        EUR => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "EUR",
             iso_numeric_code: "978",
@@ -651,7 +651,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "€",
             symbol_first: true,
         },
-        FJD => Currency {
+        FJD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "FJD",
             iso_numeric_code: "242",
@@ -661,7 +661,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: false,
         },
-        FKP => Currency {
+        FKP => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "FKP",
             iso_numeric_code: "238",
@@ -671,7 +671,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "£",
             symbol_first: false,
         },
-        GBP => Currency {
+        GBP => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "GBP",
             iso_numeric_code: "826",
@@ -681,7 +681,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "£",
             symbol_first: true,
         },
-        GEL => Currency {
+        GEL => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "GEL",
             iso_numeric_code: "981",
@@ -691,7 +691,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "ლ",
             symbol_first: false,
         },
-        GHS => Currency {
+        GHS => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "GHS",
             iso_numeric_code: "936",
@@ -701,7 +701,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₵",
             symbol_first: true,
         },
-        GIP => Currency {
+        GIP => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "GIP",
             iso_numeric_code: "292",
@@ -711,7 +711,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "£",
             symbol_first: true,
         },
-        GMD => Currency {
+        GMD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "GMD",
             iso_numeric_code: "270",
@@ -721,7 +721,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "D",
             symbol_first: false,
         },
-        GNF => Currency {
+        GNF => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "GNF",
             iso_numeric_code: "324",
@@ -731,7 +731,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Fr",
             symbol_first: false,
         },
-        GTQ => Currency {
+        GTQ => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "GTQ",
             iso_numeric_code: "320",
@@ -741,7 +741,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Q",
             symbol_first: true,
         },
-        GYD => Currency {
+        GYD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "GYD",
             iso_numeric_code: "328",
@@ -751,7 +751,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: false,
         },
-        HKD => Currency {
+        HKD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "HKD",
             iso_numeric_code: "344",
@@ -761,7 +761,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        HNL => Currency {
+        HNL => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "HNL",
             iso_numeric_code: "340",
@@ -771,7 +771,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "L",
             symbol_first: true,
         },
-        HRK => Currency {
+        HRK => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "HRK",
             iso_numeric_code: "191",
@@ -781,7 +781,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "kn",
             symbol_first: false,
         },
-        HTG => Currency {
+        HTG => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "HTG",
             iso_numeric_code: "332",
@@ -791,7 +791,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "G",
             symbol_first: false,
         },
-        HUF => Currency {
+        HUF => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "HTG",
             iso_numeric_code: "348",
@@ -801,7 +801,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Ft",
             symbol_first: false,
         },
-        IDR => Currency {
+        IDR => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "IDR",
             iso_numeric_code: "360",
@@ -811,7 +811,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Rp",
             symbol_first: true,
         },
-        ILS => Currency {
+        ILS => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "ILS",
             iso_numeric_code: "376",
@@ -821,7 +821,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₪",
             symbol_first: true,
         },
-        INR => Currency {
+        INR => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "INR",
             iso_numeric_code: "356",
@@ -831,7 +831,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₹",
             symbol_first: true,
         },
-        IQD => Currency {
+        IQD => IsoCurrency {
             exponent: 3,
             iso_alpha_code: "IQD",
             iso_numeric_code: "368",
@@ -841,7 +841,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "ع.د",
             symbol_first: false,
         },
-        IRR => Currency {
+        IRR => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "IRR",
             iso_numeric_code: "364",
@@ -851,7 +851,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "﷼",
             symbol_first: true,
         },
-        ISK => Currency {
+        ISK => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "ISK",
             iso_numeric_code: "352",
@@ -861,7 +861,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "kr",
             symbol_first: true,
         },
-        JMD => Currency {
+        JMD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "JMD",
             iso_numeric_code: "388",
@@ -871,7 +871,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        JOD => Currency {
+        JOD => IsoCurrency {
             exponent: 3,
             iso_alpha_code: "JOD",
             iso_numeric_code: "400",
@@ -881,7 +881,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "د.ا",
             symbol_first: true,
         },
-        JPY => Currency {
+        JPY => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "JPY",
             iso_numeric_code: "392",
@@ -891,7 +891,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "¥",
             symbol_first: true,
         },
-        KES => Currency {
+        KES => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "KES",
             iso_numeric_code: "404",
@@ -901,7 +901,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "KSh",
             symbol_first: true,
         },
-        KGS => Currency {
+        KGS => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "KGS",
             iso_numeric_code: "417",
@@ -911,7 +911,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "som",
             symbol_first: false,
         },
-        KHR => Currency {
+        KHR => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "KHR",
             iso_numeric_code: "116",
@@ -921,7 +921,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "៛",
             symbol_first: false,
         },
-        KMF => Currency {
+        KMF => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "KMF",
             iso_numeric_code: "174",
@@ -931,7 +931,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Fr",
             symbol_first: false,
         },
-        KPW => Currency {
+        KPW => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "KPW",
             iso_numeric_code: "408",
@@ -941,7 +941,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₩",
             symbol_first: false,
         },
-        KRW => Currency {
+        KRW => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "KRW",
             iso_numeric_code: "410",
@@ -951,7 +951,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₩",
             symbol_first: true,
         },
-        KWD => Currency {
+        KWD => IsoCurrency {
             exponent: 3,
             iso_alpha_code: "KWD",
             iso_numeric_code: "414",
@@ -961,7 +961,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "د.ك",
             symbol_first: true,
         },
-        KYD => Currency {
+        KYD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "KYD",
             iso_numeric_code: "136",
@@ -971,7 +971,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        KZT => Currency {
+        KZT => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "KZT",
             iso_numeric_code: "398",
@@ -981,7 +981,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₸",
             symbol_first: false,
         },
-        LAK => Currency {
+        LAK => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "LAK",
             iso_numeric_code: "418",
@@ -991,7 +991,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₭",
             symbol_first: false,
         },
-        LBP => Currency {
+        LBP => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "LBP",
             iso_numeric_code: "422",
@@ -1001,7 +1001,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "ل.ل",
             symbol_first: true,
         },
-        LKR => Currency {
+        LKR => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "LKR",
             iso_numeric_code: "144",
@@ -1011,7 +1011,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₨",
             symbol_first: false,
         },
-        LRD => Currency {
+        LRD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "LRD",
             iso_numeric_code: "430",
@@ -1021,7 +1021,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: false,
         },
-        LSL => Currency {
+        LSL => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "LSL",
             iso_numeric_code: "426",
@@ -1031,7 +1031,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "L",
             symbol_first: false,
         },
-        LYD => Currency {
+        LYD => IsoCurrency {
             exponent: 3,
             iso_alpha_code: "LYD",
             iso_numeric_code: "434",
@@ -1041,7 +1041,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "ل.د",
             symbol_first: false,
         },
-        MAD => Currency {
+        MAD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "MAD",
             iso_numeric_code: "504",
@@ -1051,7 +1051,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "د.م.",
             symbol_first: false,
         },
-        MDL => Currency {
+        MDL => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "MDL",
             iso_numeric_code: "498",
@@ -1061,7 +1061,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "L",
             symbol_first: false,
         },
-        MGA => Currency {
+        MGA => IsoCurrency {
             exponent: 1, // TODO - exponent is 1/5th need to represent somehow
             iso_alpha_code: "MGA",
             iso_numeric_code: "969",
@@ -1071,7 +1071,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Ar",
             symbol_first: true,
         },
-        MKD => Currency {
+        MKD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "MKD",
             iso_numeric_code: "807",
@@ -1081,7 +1081,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "ден",
             symbol_first: false,
         },
-        MMK => Currency {
+        MMK => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "MMK",
             iso_numeric_code: "104",
@@ -1091,7 +1091,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "K",
             symbol_first: false,
         },
-        MNT => Currency {
+        MNT => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "MNT",
             iso_numeric_code: "496",
@@ -1101,7 +1101,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₮",
             symbol_first: false,
         },
-        MOP => Currency {
+        MOP => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "MOP",
             iso_numeric_code: "446",
@@ -1111,7 +1111,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "P",
             symbol_first: false,
         },
-        MRU => Currency {
+        MRU => IsoCurrency {
             exponent: 1, // TODO - exponent problem of 5
             iso_alpha_code: "MRU",
             iso_numeric_code: "929",
@@ -1121,7 +1121,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "UM",
             symbol_first: false,
         },
-        MUR => Currency {
+        MUR => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "MUR",
             iso_numeric_code: "480",
@@ -1131,7 +1131,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₨",
             symbol_first: true,
         },
-        MVR => Currency {
+        MVR => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "MVR",
             iso_numeric_code: "462",
@@ -1141,7 +1141,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "MVR",
             symbol_first: false,
         },
-        MWK => Currency {
+        MWK => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "MWK",
             iso_numeric_code: "454",
@@ -1151,7 +1151,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "MK",
             symbol_first: false,
         },
-        MXN => Currency {
+        MXN => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "MXN",
             iso_numeric_code: "484",
@@ -1161,7 +1161,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        MYR => Currency {
+        MYR => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "MYR",
             iso_numeric_code: "458",
@@ -1171,7 +1171,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "RM",
             symbol_first: true,
         },
-        MZN => Currency {
+        MZN => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "MZN",
             iso_numeric_code: "943",
@@ -1181,7 +1181,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "MTn",
             symbol_first: true,
         },
-        NAD => Currency {
+        NAD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "NAD",
             iso_numeric_code: "516",
@@ -1191,7 +1191,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: false,
         },
-        NGN => Currency {
+        NGN => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "NGN",
             iso_numeric_code: "566",
@@ -1201,7 +1201,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₦",
             symbol_first: true,
         },
-        NIO => Currency {
+        NIO => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "NIO",
             iso_numeric_code: "588",
@@ -1211,7 +1211,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "C$",
             symbol_first: true,
         },
-        NOK => Currency {
+        NOK => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "NOK",
             iso_numeric_code: "578",
@@ -1221,7 +1221,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "kr",
             symbol_first: false,
         },
-        NPR => Currency {
+        NPR => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "NPR",
             iso_numeric_code: "524",
@@ -1231,7 +1231,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₨",
             symbol_first: true,
         },
-        NZD => Currency {
+        NZD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "NZD",
             iso_numeric_code: "554",
@@ -1241,7 +1241,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        OMR => Currency {
+        OMR => IsoCurrency {
             exponent: 3,
             iso_alpha_code: "OMR",
             iso_numeric_code: "512",
@@ -1251,7 +1251,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "ر.ع.",
             symbol_first: true,
         },
-        PAB => Currency {
+        PAB => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "PAB",
             iso_numeric_code: "590",
@@ -1261,7 +1261,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "B/.",
             symbol_first: true,
         },
-        PEN => Currency {
+        PEN => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "PEN",
             iso_numeric_code: "604",
@@ -1271,7 +1271,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "S/",
             symbol_first: true,
         },
-        PGK => Currency {
+        PGK => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "PGK",
             iso_numeric_code: "598",
@@ -1281,7 +1281,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "K",
             symbol_first: false,
         },
-        PHP => Currency {
+        PHP => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "PHP",
             iso_numeric_code: "608",
@@ -1291,7 +1291,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₱",
             symbol_first: true,
         },
-        PKR => Currency {
+        PKR => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "PKR",
             iso_numeric_code: "586",
@@ -1301,7 +1301,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₨",
             symbol_first: true,
         },
-        PLN => Currency {
+        PLN => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "PLN",
             iso_numeric_code: "985",
@@ -1311,7 +1311,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "zł",
             symbol_first: false,
         },
-        PYG => Currency {
+        PYG => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "PYG",
             iso_numeric_code: "600",
@@ -1321,7 +1321,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₲",
             symbol_first: true,
         },
-        QAR => Currency {
+        QAR => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "QAR",
             iso_numeric_code: "634",
@@ -1331,7 +1331,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "ر.ق",
             symbol_first: false,
         },
-        RON => Currency {
+        RON => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "RON",
             iso_numeric_code: "946",
@@ -1341,7 +1341,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "ر.ق",
             symbol_first: false,
         },
-        RSD => Currency {
+        RSD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "RSD",
             iso_numeric_code: "941",
@@ -1351,7 +1351,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "РСД",
             symbol_first: true,
         },
-        RUB => Currency {
+        RUB => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "RUB",
             iso_numeric_code: "643",
@@ -1361,7 +1361,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₽",
             symbol_first: false,
         },
-        RWF => Currency {
+        RWF => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "RWF",
             iso_numeric_code: "646",
@@ -1371,7 +1371,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "FRw",
             symbol_first: false,
         },
-        SAR => Currency {
+        SAR => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "SAR",
             iso_numeric_code: "682",
@@ -1381,7 +1381,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "ر.س",
             symbol_first: true,
         },
-        SBD => Currency {
+        SBD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "SBD",
             iso_numeric_code: "090",
@@ -1391,7 +1391,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: false,
         },
-        SCR => Currency {
+        SCR => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "SCR",
             iso_numeric_code: "690",
@@ -1401,7 +1401,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₨",
             symbol_first: false,
         },
-        SDG => Currency {
+        SDG => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "SDG",
             iso_numeric_code: "938",
@@ -1411,7 +1411,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "£",
             symbol_first: true,
         },
-        SEK => Currency {
+        SEK => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "SEK",
             iso_numeric_code: "752",
@@ -1421,7 +1421,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "kr",
             symbol_first: false,
         },
-        SGD => Currency {
+        SGD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "SGD",
             iso_numeric_code: "702",
@@ -1431,7 +1431,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        SHP => Currency {
+        SHP => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "SHP",
             iso_numeric_code: "654",
@@ -1441,7 +1441,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "£",
             symbol_first: false,
         },
-        SKK => Currency {
+        SKK => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "SKK",
             iso_numeric_code: "703",
@@ -1451,7 +1451,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Sk",
             symbol_first: true,
         },
-        SLL => Currency {
+        SLL => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "SLL",
             iso_numeric_code: "694",
@@ -1461,7 +1461,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Le",
             symbol_first: false,
         },
-        SOS => Currency {
+        SOS => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "SOS",
             iso_numeric_code: "706",
@@ -1471,7 +1471,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Sh",
             symbol_first: false,
         },
-        SRD => Currency {
+        SRD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "SRD",
             iso_numeric_code: "968",
@@ -1481,7 +1481,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: false,
         },
-        SSP => Currency {
+        SSP => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "SSP",
             iso_numeric_code: "728",
@@ -1491,7 +1491,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "£",
             symbol_first: false,
         },
-        STD => Currency {
+        STD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "STD",
             iso_numeric_code: "678",
@@ -1501,7 +1501,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Db",
             symbol_first: false,
         },
-        SVC => Currency {
+        SVC => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "SVC",
             iso_numeric_code: "222",
@@ -1511,7 +1511,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₡",
             symbol_first: true,
         },
-        SYP => Currency {
+        SYP => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "SYP",
             iso_numeric_code: "760",
@@ -1521,7 +1521,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "£S",
             symbol_first: false,
         },
-        SZL => Currency {
+        SZL => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "SZL",
             iso_numeric_code: "748",
@@ -1531,7 +1531,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "E",
             symbol_first: true,
         },
-        THB => Currency {
+        THB => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "THB",
             iso_numeric_code: "764",
@@ -1541,7 +1541,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "฿",
             symbol_first: true,
         },
-        TJS => Currency {
+        TJS => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "TJS",
             iso_numeric_code: "972",
@@ -1551,7 +1551,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "ЅМ",
             symbol_first: false,
         },
-        TMT => Currency {
+        TMT => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "TMT",
             iso_numeric_code: "934",
@@ -1561,7 +1561,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "T",
             symbol_first: false,
         },
-        TND => Currency {
+        TND => IsoCurrency {
             exponent: 3,
             iso_alpha_code: "TND",
             iso_numeric_code: "788",
@@ -1571,7 +1571,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "د.ت",
             symbol_first: false,
         },
-        TOP => Currency {
+        TOP => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "TOP",
             iso_numeric_code: "776",
@@ -1581,7 +1581,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "T$",
             symbol_first: true,
         },
-        TRY => Currency {
+        TRY => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "TRY",
             iso_numeric_code: "949",
@@ -1591,7 +1591,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₺",
             symbol_first: true,
         },
-        TTD => Currency {
+        TTD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "TTD",
             iso_numeric_code: "780",
@@ -1601,7 +1601,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: false,
         },
-        TWD => Currency {
+        TWD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "TWD",
             iso_numeric_code: "901",
@@ -1611,7 +1611,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        TZS => Currency {
+        TZS => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "TZS",
             iso_numeric_code: "834",
@@ -1621,7 +1621,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Sh",
             symbol_first: true,
         },
-        UAH => Currency {
+        UAH => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "UAH",
             iso_numeric_code: "980",
@@ -1631,7 +1631,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₴",
             symbol_first: false,
         },
-        UGX => Currency {
+        UGX => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "UGX",
             iso_numeric_code: "800",
@@ -1641,7 +1641,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "USh",
             symbol_first: false,
         },
-        USD => Currency {
+        USD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "USD",
             iso_numeric_code: "840",
@@ -1651,7 +1651,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        UYU => Currency {
+        UYU => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "UYU",
             iso_numeric_code: "858",
@@ -1661,7 +1661,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        UZS => Currency {
+        UZS => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "UZS",
             iso_numeric_code: "860",
@@ -1671,7 +1671,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "so'm",
             symbol_first: false,
         },
-        VES => Currency {
+        VES => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "VES",
             iso_numeric_code: "928",
@@ -1681,7 +1681,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Bs",
             symbol_first: true,
         },
-        VND => Currency {
+        VND => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "VND",
             iso_numeric_code: "704",
@@ -1691,7 +1691,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "₫",
             symbol_first: false,
         },
-        VUV => Currency {
+        VUV => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "VUV",
             iso_numeric_code: "548",
@@ -1701,7 +1701,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Vt",
             symbol_first: true,
         },
-        WST => Currency {
+        WST => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "WST",
             iso_numeric_code: "882",
@@ -1711,7 +1711,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "T",
             symbol_first: false,
         },
-        XAF => Currency {
+        XAF => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "XAF",
             iso_numeric_code: "950",
@@ -1721,7 +1721,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "CFA",
             symbol_first: false,
         },
-        XAG => Currency {
+        XAG => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "XAG",
             iso_numeric_code: "961",
@@ -1731,7 +1731,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "oz t",
             symbol_first: false,
         },
-        XAU => Currency {
+        XAU => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "XAU",
             iso_numeric_code: "959",
@@ -1741,7 +1741,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "oz t",
             symbol_first: false,
         },
-        XBA => Currency {
+        XBA => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "XBA",
             iso_numeric_code: "955",
@@ -1751,7 +1751,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "",
             symbol_first: false,
         },
-        XBB => Currency {
+        XBB => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "XBB",
             iso_numeric_code: "956",
@@ -1761,7 +1761,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "",
             symbol_first: false,
         },
-        XBC => Currency {
+        XBC => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "XBC",
             iso_numeric_code: "957",
@@ -1771,7 +1771,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "",
             symbol_first: false,
         },
-        XBD => Currency {
+        XBD => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "XBD",
             iso_numeric_code: "958",
@@ -1781,7 +1781,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "",
             symbol_first: false,
         },
-        XCD => Currency {
+        XCD => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "XCD",
             iso_numeric_code: "951",
@@ -1791,7 +1791,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "$",
             symbol_first: true,
         },
-        XDR => Currency {
+        XDR => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "XDR",
             iso_numeric_code: "960",
@@ -1801,7 +1801,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "SDR",
             symbol_first: false,
         },
-        XOF => Currency {
+        XOF => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "XOF",
             iso_numeric_code: "952",
@@ -1811,7 +1811,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Fr",
             symbol_first: false,
         },
-        XPD => Currency {
+        XPD => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "XPD",
             iso_numeric_code: "964",
@@ -1821,7 +1821,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "oz t",
             symbol_first: false,
         },
-        XPF => Currency {
+        XPF => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "XPF",
             iso_numeric_code: "953",
@@ -1831,7 +1831,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "Fr",
             symbol_first: false,
         },
-        XPT => Currency {
+        XPT => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "XPT",
             iso_numeric_code: "962",
@@ -1841,7 +1841,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "oz t",
             symbol_first: false,
         },
-        XTS => Currency {
+        XTS => IsoCurrency {
             exponent: 0,
             iso_alpha_code: "XTS",
             iso_numeric_code: "963",
@@ -1851,7 +1851,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "oz t",
             symbol_first: false,
         },
-        YER => Currency {
+        YER => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "YER",
             iso_numeric_code: "886",
@@ -1861,7 +1861,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "﷼",
             symbol_first: false,
         },
-        ZAR => Currency {
+        ZAR => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "ZAR",
             iso_numeric_code: "710",
@@ -1871,7 +1871,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "R",
             symbol_first: true,
         },
-        ZMK => Currency {
+        ZMK => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "ZMK",
             iso_numeric_code: "894",
@@ -1881,7 +1881,7 @@ pub fn from_enum(code: &Iso) -> Currency {
             symbol: "ZK",
             symbol_first: false,
         },
-        ZMW => Currency {
+        ZMW => IsoCurrency {
             exponent: 2,
             iso_alpha_code: "ZMK",
             iso_numeric_code: "967",
